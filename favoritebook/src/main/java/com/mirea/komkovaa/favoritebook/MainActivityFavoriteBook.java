@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -49,7 +50,10 @@ public class MainActivityFavoriteBook extends AppCompatActivity {
                 if (result.getResultCode() == Activity.RESULT_OK) {
                     Intent data = result.getData();
                     String userBook = data.getStringExtra(USER_MESSAGE);
-                    textViewUserBook.setText(userBook);
+
+                    TextView textViewUserBook = findViewById(R.id.textView2);
+                    String full_text = "Любимая книга и цитата пользователя: " + userBook;
+                    textViewUserBook.setText(full_text);
                 }
             }
         };

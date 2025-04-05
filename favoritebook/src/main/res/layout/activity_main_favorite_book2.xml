@@ -44,6 +44,7 @@
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:onClick="clickBtn1"
+            android:text="Отправка данных" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
